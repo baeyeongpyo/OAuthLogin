@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OAuthLogin</string>
+    <string name="kakao_app_key">6194ca15ea8c15304ff9675f7f848761</string>
+    <string name="kakao_client_secret_key">oXFPdFUIgPHjxi4ZtaKQDlyH03OQhPu1</string>
+    <string name="facebook_app_id">655696231490392</string>
+    <string name="fb_login_protocol_scheme">fb655696231490392</string>
+</resources>

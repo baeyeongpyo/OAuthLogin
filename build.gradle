@@ -1,0 +1,37 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext{
+        kotlin_version = '1.2.51'
+        support_lib_versiion = '27.1.1'
+        kako_sdk_version = '1.13.0'
+        constraint_layout_version = '1.1.3'
+        fire_base_vsersion = '16.0.3'
+        google_auth_version = '16.0.0'
+
+        junit_version = '4.12'
+        test_runner = '1.0.2'
+        test_espresso = '3.0.2'
+
+        minSdk = '19'
+        compileSdk = '27'
+        targetSdk = '27'
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.0.1'
+    }
+}
+
+apply from : 'OAuth.gradle'
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

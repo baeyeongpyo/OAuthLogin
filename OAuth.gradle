@@ -1,0 +1,54 @@
+rootProject.allprojects { project ->
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    }
+
+    project.afterEvaluate {
+        if (project.name == 'socialoauth') {
+            repositories {
+                jcenter()
+                mavenCentral()
+            }
+
+            dependencies {
+                implementation fileTree(dir: 'libs', include: ['*.jar'])
+                implementation "com.kakao.sdk:usermgmt:$kako_sdk_version"
+                implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+                implementation "com.android.support:appcompat-v7:$support_lib_versiion"
+                implementation "com.android.support:support-core-utils:$support_lib_versiion"
+                implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+//                implementation 'com.facebook.android:facebook-login:4.36.0'
+                implementation "com.google.firebase:firebase-core:$fire_base_vsersion"
+                implementation "com.google.android.gms:play-services-auth:$google_auth_version"
+                testImplementation "junit:junit:$junit_version"
+                androidTestImplementation "com.android.support.test:runner:$test_runner"
+                androidTestImplementation "com.android.support.test.espresso:espresso-core:$test_espresso"
+            }
+        } else if (project.name == 'mainapplication') {
+            apply plugin: 'com.google.gms.google-services'
+            repositories {
+                jcenter()
+                mavenCentral()
+            }
+            dependencies {
+                implementation fileTree(dir: 'libs', include: ['*.jar'])
+                implementation "com.kakao.sdk:usermgmt:$kako_sdk_version"
+                implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+                implementation "com.android.support:appcompat-v7:$support_lib_versiion"
+                implementation "com.android.support:support-core-utils:$support_lib_versiion"
+                implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+//                implementation 'com.facebook.android:facebook-login:4.36.0'
+                implementation "com.google.firebase:firebase-core:$fire_base_vsersion"
+                implementation "com.google.android.gms:play-services-auth:$google_auth_version"
+                testImplementation "junit:junit:$junit_version"
+                androidTestImplementation "com.android.support.test:runner:$test_runner"
+                androidTestImplementation "com.android.support.test.espresso:espresso-core:$test_espresso"
+            }
+        }
+    }
+
+}
