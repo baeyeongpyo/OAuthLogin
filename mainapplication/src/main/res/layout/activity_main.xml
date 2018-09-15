@@ -8,8 +8,11 @@
 
     <FrameLayout
         android:id="@+id/login_fragment"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -25,6 +28,14 @@
         app:layout_constraintBottom_toTopOf="@id/logout_button"
         />
 
+    <android.support.constraint.Barrier
+        android:id="@+id/main_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="logout_button,get_user_info_button"
+        />
+
     <Button
         android:id="@+id/logout_button"
         android:text="logout"
@@ -34,6 +45,27 @@
         app:layout_constraintStart_toEndOf="@id/get_user_info_button"
         app:layout_constraintEnd_toEndOf="parent"
         />
+
+    <Button
+        android:id="@+id/firebase_logout_button"
+        android:text="fireBase Logout Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/main_barrier"
+        />
+
+    <Button
+        android:id="@+id/firebase_get_user_info_button"
+        android:text="fireBase Get User Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/firebase_logout_button"
+        />
+
 
     <Button
         android:id="@+id/get_user_info_button"

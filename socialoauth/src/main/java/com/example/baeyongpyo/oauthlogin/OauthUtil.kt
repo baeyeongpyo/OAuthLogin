@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.util.Base64
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import java.security.MessageDigest
 
 fun Context.getAppKeyHash(): String {
@@ -19,6 +20,8 @@ fun Context.getAppKeyHash(): String {
     return "not Find"
 }
 
+fun Context.fireBaseInstance() = FirebaseAuth.getInstance()
+
 internal fun AppCompatActivity.replace(@IdRes frameId : Int, fragment : Fragment, tag : String? = null){
     supportFragmentManager
             .beginTransaction()
@@ -28,3 +31,4 @@ internal fun AppCompatActivity.replace(@IdRes frameId : Int, fragment : Fragment
 internal fun Context.toast(msg : String, time : Int = Toast.LENGTH_SHORT){
     Toast.makeText(this, msg, time).show()
 }
+
