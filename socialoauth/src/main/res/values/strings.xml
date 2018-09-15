@@ -4,4 +4,5 @@
     <string name="kakao_client_secret_key">oXFPdFUIgPHjxi4ZtaKQDlyH03OQhPu1</string>
     <string name="facebook_app_id">655696231490392</string>
     <string name="fb_login_protocol_scheme">fb655696231490392</string>
+    <string name="google_client_web_key">712797676372-nv4bhsgod5g7fobmllq1q6180pjsgbnb.apps.googleusercontent.com</string>
 </resources>

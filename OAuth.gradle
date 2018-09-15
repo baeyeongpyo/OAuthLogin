@@ -23,6 +23,7 @@ rootProject.allprojects { project ->
                 implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
 //                implementation 'com.facebook.android:facebook-login:4.36.0'
                 implementation "com.google.firebase:firebase-core:$fire_base_vsersion"
+                implementation "com.google.firebase:firebase-auth:$fire_base_vsersion"
                 implementation "com.google.android.gms:play-services-auth:$google_auth_version"
                 testImplementation "junit:junit:$junit_version"
                 androidTestImplementation "com.android.support.test:runner:$test_runner"
@@ -43,6 +44,7 @@ rootProject.allprojects { project ->
                 implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
 //                implementation 'com.facebook.android:facebook-login:4.36.0'
                 implementation "com.google.firebase:firebase-core:$fire_base_vsersion"
+                implementation "com.google.firebase:firebase-auth:$fire_base_vsersion"
                 implementation "com.google.android.gms:play-services-auth:$google_auth_version"
                 testImplementation "junit:junit:$junit_version"
                 androidTestImplementation "com.android.support.test:runner:$test_runner"
