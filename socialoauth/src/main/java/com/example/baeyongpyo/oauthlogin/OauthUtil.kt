@@ -1,13 +1,16 @@
 package com.example.baeyongpyo.oauthlogin
 
+import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.support.annotation.IdRes
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.util.Base64
+import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 import java.security.MessageDigest
 
 fun Context.getAppKeyHash(): String {
@@ -31,4 +34,3 @@ internal fun AppCompatActivity.replace(@IdRes frameId : Int, fragment : Fragment
 internal fun Context.toast(msg : String, time : Int = Toast.LENGTH_SHORT){
     Toast.makeText(this, msg, time).show()
 }
-
